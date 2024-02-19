@@ -29,7 +29,7 @@ public float Gravity = 9.8f;
         {
             _moveVector += transform.forward;
         }
-        //if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
             _moveVector -= transform.forward;
         }
