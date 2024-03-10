@@ -8,9 +8,9 @@ public float Gravity = 9.8f;
     public float JampForce;
     public float Speed;
 
+
     private float _fallVelocity = 1;
     private Vector3 _moveVector;
-
     private CharacterController _CharacterController;
     
     // Start is called before the first frame update
