@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public float regenerationDelay = 0; 
+    public float regeneration = 10;
     public RectTransform valueRectTransform;
-    public float value = 50;
+    public float value = 100;
     public GameObject gameplayUI;
     public GameObject gameOverScreen;
 
@@ -15,6 +17,15 @@ public class PlayerHealth : MonoBehaviour
     {
         _maxValue = value;
         DrawHealthBar();
+    }
+
+    private void Update()
+    {
+        if (value < _maxValue)
+        {
+            Invoke("Regeneration", regenerationDelay);
+            DrawHealthBar();
+        }
     }
 
     private void DrawHealthBar()
@@ -39,5 +50,10 @@ public class PlayerHealth : MonoBehaviour
             GetComponent<plaerController>().enabled = false;
             GetComponent<FireballCaster>().enabled = false;
             GetComponent<CameraROtation>().enabled = false;
+    }
+
+    private void Regeneration()
+    {
+        value += regeneration * Time.deltaTime;
     }
 }

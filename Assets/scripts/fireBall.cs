@@ -28,6 +28,12 @@ public class fireBall : MonoBehaviour
             {
                enemyHealth.DealDamage(damage);
             }
+
+        var BossHealth = collision.gameObject.GetComponent<BossHealth>();
+        if (BossHealth != null)
+        {
+            BossHealth.DealDamage(damage);
+        }
     }
 
     private void DestroyFireBall()

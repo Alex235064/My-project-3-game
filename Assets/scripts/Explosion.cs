@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    public float damage = 25;
+    public float armore = 25;
+    public float damage = 50;
     public float Maxsize = 5;
     public float speed = 10;
     // Start is called before the first frame update
@@ -31,7 +32,7 @@ public class Explosion : MonoBehaviour
         var playerHealth = other.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {
-            playerHealth.DealDamage(damage);
+            playerHealth.DealDamage(damage - armore);
         }
 
         var enemyHEalth = other.GetComponent<EnemyHealth>();

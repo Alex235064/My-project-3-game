@@ -966,6 +966,7 @@ GameObject:
   - component: {fileID: 7961588891067803192}
   - component: {fileID: 7486571368846123072}
   - component: {fileID: 4064030939673856393}
+  - component: {fileID: 5619919274229388801}
   m_Layer: 0
   m_Name: plaer
   m_TagString: Untagged
@@ -1076,6 +1077,24 @@ MonoBehaviour:
     type: 3}
   grenadeSourceTransform: {fileID: 4146305063133995353}
   time: 5
+--- !u!114 &5619919274229388801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961588891067803196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ed9de6a323494478439352893af28c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regenerationDelay: 0
+  regeneration: 10
+  valueRectTransform: {fileID: 2929117330487655516}
+  value: 100
+  gameplayUI: {fileID: 1320846911396322135}
+  gameOverScreen: {fileID: 2360095847454850639}
 --- !u!1 &7961588892398622813
 GameObject:
   m_ObjectHideFlags: 0
